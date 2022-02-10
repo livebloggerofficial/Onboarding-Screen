@@ -1,0 +1,118 @@
+.onboarding-btn {
+  padding: 12px 32px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #e63946;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.onboarding-container,
+.onboarding-container * {
+  box-sizing: border-box;
+}
+
+.onboarding-container .image svg {
+  height: 150px;
+  width: 100%;
+  margin: 32px 0;
+}
+
+.onboarding-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 100ms ease;
+}
+
+.onboarding-overlay.active {
+  opacity: 1;
+}
+
+.onboarding-container {
+  z-index: 300;
+  position: fixed;
+  font-family: "Roboto", sans-serif;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, calc(-50% + 25px));
+  box-shadow: 0 4px 40px -8px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: all 100ms ease;
+}
+
+.onboarding-container.active {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.onboarding-container .content {
+  background: #fff;
+  max-width: 300px;
+  padding-top: 24px;
+  overflow: hidden;
+}
+
+.onboarding-container .steps {
+  display: flex;
+  width: 300%;
+  transition: all 400ms ease;
+}
+
+.onboarding-container h3 {
+  margin: 0;
+  font-size: 32px;
+  text-align: center;
+  padding: 0 32px;
+}
+
+.onboarding-container p {
+  line-height: 1.8;
+  padding: 0 32px;
+}
+
+.onboarding-container .next-btn {
+  width: 100%;
+  padding: 18px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  background: #1d3557;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.onboarding-container .skip-btn {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #636363;
+}
+
+.onboarding-container .dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.onboarding-container .dot {
+  width: 10px;
+  height: 10px;
+  background: #dbdbdb;
+  border-radius: 50%;
+  transition: all 400ms ease;
+}
+
+.onboarding-container .dot.active {
+  background: #222;
+}
